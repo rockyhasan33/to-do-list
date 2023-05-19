@@ -121,7 +121,27 @@ input[type='text']::placeholder {
 }
 
 .to-do-list .order-list .myLi:active {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+}
+
+.fa-trash {
+    position: absolute;
+    right: 22px;
+    padding: 0.4rem;
+    top: 9px;
+    cursor: pointer;
+    background: red;
+    color: #fff;
+}
+
+.fa-check {
+    position: absolute;
+    right: 66px;
+    cursor: pointer;
+    padding: 0.4rem;
+    top: 9px;
+    color: #fff;
+    background: green;
 }
 
 @media screen and (max-width: 400px) {

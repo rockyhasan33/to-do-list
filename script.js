@@ -15,8 +15,10 @@ addingBtn.addEventListener('click', () =>  {
 
 
     let createList = document.createElement('li')
+    let deleteIcon = document.createElement('i');
     let doneIcon = document.createElement('i');
-    doneIcon.classList = `fa-solid fa-trash`
+    doneIcon.classList = 'fa-solid fa-check'
+    deleteIcon.classList = `fa-solid fa-trash`
     createList.classList = 'myLi'
     createList.innerText = inputField.value;
     
@@ -28,7 +30,22 @@ addingBtn.addEventListener('click', () =>  {
         orderList.insertAdjacentElement('afterbegin',createList);
         errorText.innerText = ''; 
         inputField.value = '';
+        createList.append(deleteIcon)
+        createList.append(doneIcon)
     }
+
+    deleteIcon.addEventListener('click', () => {
+        orderList.removeChild(createList)
+    },true);
+
+    doneIcon.addEventListener('click', (e) => {
+        if (e.bubbles) {
+        createList.style.textDecoration = 'line-through'
+        } else {
+            createList.style.textDecoration = 'underline';
+    }
+        
+    })
 
     
 
