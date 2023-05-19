@@ -19,23 +19,20 @@ addingBtn.addEventListener('click', () =>  {
     doneIcon.classList = `fa-solid fa-trash`
     createList.classList = 'myLi'
     createList.innerText = inputField.value;
+    
 
     if(createList.innerText === '') {
         errorText.innerText = 'Please Type Something...'
         return
     }else {
         orderList.insertAdjacentElement('afterbegin',createList);
-        inputField.innerText = ''
-        errorText.innerText = '';
+        errorText.innerText = ''; 
+        inputField.value = '';
     }
+
+    
+    
 
 })
 
 
-let MyOrder = document.querySelectorAll('.myOrder')
-
-let newArr = Array.from(MyOrder)
-
-for(let i = 0; i < newArr.array.length; i++) {
-    console.log(newArr[i])
-}
