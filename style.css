@@ -41,12 +41,12 @@ input[type='text'] {
     min-width: 70vw;
     min-height: 8vh;
     padding: 1rem;
-    /* font-size: 1.8*/
+    font-size: 1.8rem;
     outline:none;
     border-radius: 10px;
     border: none;
     margin-top: 2rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     transition: all 0.15s ease-in-out;
     
 }
