@@ -116,13 +116,21 @@ input[type='text']::placeholder {
     font-size: 1.3rem;
     position: relative;
     /* background-color: greenyellow; */
+    transform: translate(0%);
     word-wrap: break-word;
-    transition: transform 0.1s ease-in-out;
+    animation: leftSide 0.5s ease-in-out;
 }
 
-.to-do-list .order-list .myLi:active {
-    /* transform: scale(1.05); */
+@keyframes leftSide {
+    to {
+        transform: translate(0%);
+    } from {
+        transform: translate(100%);
+    }
+    
 }
+
+
 
 .fa-trash {
     position: absolute;

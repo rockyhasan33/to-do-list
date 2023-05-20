@@ -18,7 +18,9 @@ addingBtn.addEventListener('click', () =>  {
     let deleteIcon = document.createElement('i');
     let doneIcon = document.createElement('i');
     doneIcon.classList = 'fa-solid fa-check'
+    doneIcon.title = 'click and double click'
     deleteIcon.classList = `fa-solid fa-trash`
+    deleteIcon.title = 'Click for Delete'
     createList.classList = 'myLi'
     createList.innerText = inputField.value;
     
@@ -42,10 +44,15 @@ addingBtn.addEventListener('click', () =>  {
         if (e.bubbles) {
         createList.style.textDecoration = 'line-through'
         } else {
-            createList.style.textDecoration = 'underline';
+            
     }
         
-    })
+    }, true)
+
+    doneIcon.addEventListener('dblclick', () => {
+        createList.style.textDecoration = 'none'
+        
+    }, true)
 
     
 
